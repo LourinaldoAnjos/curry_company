@@ -315,7 +315,10 @@ with tab1:
             # Contagem de entregadores únicos
             entregadores_unicos = len(df_1.loc[ : ,'Delivery_person_ID'].unique())
 
-            col1.metric('Entregadores', entregadores_unicos)
+            # Formatação da pontuação
+            numero_formatado = f"{entregadores_unicos:,}".replace(",", ".")
+
+            col1.metric('Entregadores', numero_formatado)
 
         with col2:
             media_distance = distance(df_1, fig = False)
