@@ -239,7 +239,7 @@ def country_maps(df_1):
       fl.Marker([location_info['Delivery_location_latitude'], location_info['Delivery_location_longitude']], popup = location_info[['City', 'Road_traffic_density']]).add_to(map)
 
     # Desenha o mapa do mundo com pino
-    folium_static(map, width = 1020, height = 600)
+    folium_static(map, width = 800, height = 500)
     
     return None
     
